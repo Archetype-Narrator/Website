@@ -215,6 +215,27 @@
         .oc-summary { font-size: 0.9rem; color: #c0d0e0; line-height: 1.5; font-weight: 300; }
         .oc-date { font-size: 0.7rem; color: rgba(0,242,255,0.35); letter-spacing: 1px; margin-top: auto; font-family: 'Cinzel', serif; }
 
+        /* ── WIP CARDS ── */
+        .oc-card.wip {
+            opacity: 0.45;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(60%);
+        }
+        .oc-card.wip .oc-frame::before {
+            content: "[ RECORD INCOMPLETE ]";
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: rgba(0, 242, 255, 0.5);
+            z-index: 10;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
         /* ── LOAD ERROR ── */
         #loadError {
             display: none; text-align: center; padding: 60px 20px;
@@ -446,11 +467,11 @@
                 if (!oc.title || !oc.type || !oc.sub) return;
 
                 const card = document.createElement('a');
-                card.className = 'oc-card';
-                card.href   = oc.link || '#';
-                card.target = '_blank';
-                card.rel    = 'noopener noreferrer';
-                card.setAttribute('aria-label', `Open ${oc.title} document`);
+                card.className = oc.wip ? 'oc-card wip' : 'oc-card';
+                card.href   = oc.wip ? undefined : (oc.link || '#');
+                card.target = oc.wip ? undefined : '_blank';
+                card.rel    = oc.wip ? undefined : 'noopener noreferrer';
+                card.setAttribute('aria-label', oc.wip ? `${oc.title} — record incomplete` : `Open ${oc.title} document`);
                 card.dataset.search = `${oc.title.toLowerCase()} ${oc.sub.toLowerCase()} ${(oc.summary || '').toLowerCase()}`;
                 card.dataset.type   = oc.type;
                 card.dataset.sub    = oc.sub;

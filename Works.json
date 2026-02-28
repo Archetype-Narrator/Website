@@ -1,14 +1,14 @@
 [
     {
-        "title": "The Lady Of The Lake",
+        "title": "Vivian",
         "type": "Servant",
-        "sub": "Saber",
+        "sub": "Caster",
         "color": "color-servant",
         "img": "assets/img/ba92ef648d27df495beb1eee187a7f641de23e25.jpg",
         "imgFallback": "https://images.unsplash.com/photo-1580130281216-33b47f45a3c3?q=80&w=400",
-        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
-        "summary": "The Legendary Lady Of The Lake.",
-        "dateAdded": "2026-01-01"
+        "link": "https://docs.google.com/document/d/1nKnf9Zs4eUJ4K9YReu0t58GAd-K_AZHK_tqyLvGKUqc/edit?usp=sharing",
+        "summary": "The Lady of the Lake, also known as Vivian or Nimuë, is an enchantress who lives in a castle [city] beneath a lake within the Isles Of Avalon [Paradise] where the Sage Merlin rests. According to legend, she is most famous for giving Arthur the magical sword Excalibur, for fostering Sir Lancelot after his father’s death and for imprisoning Merlin in a Tower or Tree or at times; a Cave. She has been associated with a Celtic goddess and with stories of water fairies and her story may have combined several stories about ladies of lakes. She is mentioned in old French poems in the 12th century and in a French prose cycle of Arthur stories in the 13th century.",
+        "dateAdded": "2026-01-02"
     },
     {
         "title": "Ritsuka Fujimaru",
@@ -19,7 +19,8 @@
         "imgFallback": "https://images.unsplash.com/photo-1560972550-aba3456b5564?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Final Master of humanity. Possesses exceptional compatibility with a vast range of Heroic Spirits. Strategic capability: High.",
-        "dateAdded": "2026-01-01"
+        "dateAdded": "2026-01-01",
+        "wip": true
     },
     {
         "title": "Singularity Analysis",
@@ -30,7 +31,8 @@
         "imgFallback": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Comprehensive data regarding spatial-temporal distortions and historical collapse points. Essential for Rayshift navigation.",
-        "dateAdded": "2026-01-02"
+        "dateAdded": "2026-01-02",
+        "wip": true
     },
     {
         "title": "Vivian",
@@ -41,7 +43,8 @@
         "imgFallback": "https://images.unsplash.com/photo-1614728263952-84ea206f99b6?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "R",
-        "dateAdded": "2026-01-03"
+        "dateAdded": "2026-01-03",
+        "wip": true
     },
     {
         "title": "Vivian",
@@ -52,7 +55,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/cc44ff?text=ALTER-EGO",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Co",
-        "dateAdded": "2026-01-04"
+        "dateAdded": "2026-01-04",
+        "wip": true
     },
     {
         "title": "Alter-Ego Node 2",
@@ -63,7 +67,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/cc44ff?text=ALTER-EGO",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Divergent manifestation exhibiting dual-origin Saint Graph structure. Origin unknown. Threat assessment: elevated.",
-        "dateAdded": "2026-01-04"
+        "dateAdded": "2026-01-04",
+        "wip": true
     },
     {
         "title": "Pretender Node 1",
@@ -74,7 +79,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Heroic Spirit manifesting under a false identity. True name obscured. Alignment and Noble Phantasm classification: REDACTED.",
-        "dateAdded": "2026-01-05"
+        "dateAdded": "2026-01-05",
+        "wip": true
     },
     {
         "title": "Pretender Node 2",
@@ -85,7 +91,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Parameters intentionally misreported. Saint Graph appears to simulate another class container as primary camouflage layer.",
-        "dateAdded": "2026-01-05"
+        "dateAdded": "2026-01-05",
+        "wip": true
     },
     {
         "title": "Avenger Node 1",
@@ -96,7 +103,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/880000?text=AVENGER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Vessel of accumulated curses and resentment. Designated Extra-class due to inherent hostility toward humanity itself.",
-        "dateAdded": "2026-01-06"
+        "dateAdded": "2026-01-06",
+        "wip": true
     },
     {
         "title": "Avenger Node 2",
@@ -107,7 +115,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/880000?text=AVENGER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Manifested with inverse alignment values. High self-damage potential noted. Handle with Chaldea-grade bounded field protocols.",
-        "dateAdded": "2026-01-06"
+        "dateAdded": "2026-01-06",
+        "wip": true
     },
     {
         "title": "Ruler Node 1",
@@ -118,7 +127,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/f0e060?text=RULER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Summoned under direct Divine Spirit authorization to oversee Holy Grail War integrity. Carries two Command Seals as standard.",
-        "dateAdded": "2026-01-07"
+        "dateAdded": "2026-01-07",
+        "wip": true
     },
     {
         "title": "Ruler Node 2",
@@ -129,7 +139,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/f0e060?text=RULER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Impartial arbitration authority. Classified resistance to Noble Phantasm interference. Priority: neutrality over victory.",
-        "dateAdded": "2026-01-07"
+        "dateAdded": "2026-01-07",
+        "wip": true
     },
     {
         "title": "Shielder Node 1",
@@ -140,7 +151,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/4488ff?text=SHIELDER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Defensive-specialist class container. Saint Graph optimized for protection and endurance over offensive output. Loyalty index: absolute.",
-        "dateAdded": "2026-01-08"
+        "dateAdded": "2026-01-08",
+        "wip": true
     },
     {
         "title": "Shielder Node 2",
@@ -151,7 +163,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/4488ff?text=SHIELDER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Unique manifestation exhibiting near-zero Mystery exposure. Classified as incomplete Heroic Spirit — potential for growth: maximum.",
-        "dateAdded": "2026-01-08"
+        "dateAdded": "2026-01-08",
+        "wip": true
     },
     {
         "title": "Watcher Node 1",
@@ -162,7 +175,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/aaffee?text=WATCHER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Non-standard manifestation. Does not act directly. Observational presence only — interference with the timeline remains unconfirmed.",
-        "dateAdded": "2026-01-09"
+        "dateAdded": "2026-01-09",
+        "wip": true
     },
     {
         "title": "Watcher Node 2",
@@ -173,7 +187,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/aaffee?text=WATCHER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Entity classified beyond conventional Saint Graph parameters. Nature: unclear. Recommend observation protocol Sigma-7.",
-        "dateAdded": "2026-01-09"
+        "dateAdded": "2026-01-09",
+        "wip": true
     },
     {
         "title": "Foreigner Node 1",
@@ -184,7 +199,8 @@
         "imgFallback": "https://placehold.co/400x600/01080f/7744cc?text=FOREIGNER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Saint Graph contaminated by Outer God influence. Standard parameters inapplicable. Sanity index: unstable. Do not establish direct link.",
-        "dateAdded": "2026-01-10"
+        "dateAdded": "2026-01-10",
+        "wip": true
     },
     {
         "title": "Foreigner Node 2",
@@ -195,6 +211,7 @@
         "imgFallback": "https://placehold.co/400x600/01080f/7744cc?text=FOREIGNER",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Heroic Spirit acting as vessel for entities beyond the Texture. Noble Phantasm origin: void-adjacent. Classification: Extra — Abyssal.",
-        "dateAdded": "2026-01-10"
+        "dateAdded": "2026-01-10",
+        "wip": true
     }
 ]
