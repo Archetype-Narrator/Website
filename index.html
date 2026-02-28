@@ -86,55 +86,113 @@
         .filter-wrapper { max-width: 1400px; margin: 0 auto; }
 
         .filter-row {
-            display: flex; align-items: flex-start;
-            gap: 12px; justify-content: space-between;
+            display: flex; align-items: center;
+            gap: 10px; flex-wrap: wrap; position: relative;
         }
 
-        .filter-toggle {
-            display: none;
-            width: 100%; background: transparent;
-            border: 1px solid var(--hud-border); color: var(--hud-cyan);
-            padding: 6px 14px; font-family: 'Cinzel', serif;
-            font-size: 0.75rem; letter-spacing: 1px; cursor: pointer;
-            text-align: left; margin-bottom: 6px;
-            clip-path: polygon(0 0, 98% 0, 100% 30%, 100% 100%, 0 100%);
-            transition: 0.3s;
+        /* The OC_TYPE_FILTER trigger button */
+        .filter-trigger {
+            background: transparent; border: 1px solid var(--hud-border);
+            color: var(--hud-cyan); padding: 6px 16px;
+            font-family: 'Cinzel', serif; font-size: 0.72rem;
+            letter-spacing: 1px; cursor: pointer; white-space: nowrap;
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+            transition: background 0.3s, box-shadow 0.3s;
         }
-        .filter-toggle:hover { background: rgba(0,242,255,0.08); }
-        .filter-toggle .arrow { float: right; transition: transform 0.3s; }
-        .filter-toggle.open .arrow { transform: rotate(180deg); }
+        .filter-trigger:hover { background: rgba(0,242,255,0.1); }
+        .filter-trigger.open {
+            background: rgba(0,242,255,0.12);
+            border-color: var(--hud-cyan);
+            box-shadow: 0 0 10px rgba(0,242,255,0.15);
+        }
+        .filter-trigger .ft-arrow { margin-left: 8px; display: inline-block; transition: transform 0.25s; }
+        .filter-trigger.open .ft-arrow { transform: rotate(180deg); }
 
-        .filter-container {
-            display: flex; flex-wrap: wrap; gap: 8px;
-            justify-content: center; flex: 1;
+        /* Active filter count badge */
+        .filter-badge {
+            display: inline-block; background: var(--hud-cyan);
+            color: var(--bg-deep); font-size: 0.6rem; font-weight: 800;
+            padding: 1px 5px; margin-left: 6px;
+            border-radius: 2px; vertical-align: middle;
+            font-family: 'Outfit', sans-serif; letter-spacing: 0;
         }
-        .filter-container.collapsed { display: none; }
+        .filter-badge.hidden { display: none; }
+
+        /* Active filter pills shown next to button */
+        .active-pill {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(0,242,255,0.1); border: 1px solid var(--hud-cyan);
+            color: var(--hud-cyan); padding: 3px 10px;
+            font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 1px;
+            clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+            cursor: pointer; transition: background 0.2s;
+        }
+        .active-pill:hover { background: rgba(255,60,60,0.15); border-color: var(--command-red); color: var(--command-red); }
+        .active-pill .pill-x { font-size: 0.7rem; opacity: 0.7; }
+
+        /* Clear all button */
+        .filter-clear {
+            background: transparent; border: 1px solid rgba(255,60,60,0.4);
+            color: rgba(255,60,60,0.7); padding: 4px 10px;
+            font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 1px;
+            cursor: pointer; transition: 0.2s;
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+        }
+        .filter-clear:hover { background: rgba(255,60,60,0.1); color: var(--command-red); border-color: var(--command-red); }
+        .filter-clear.hidden { display: none; }
+
+        /* Dropdown panel */
+        .filter-panel {
+            display: none; position: absolute;
+            top: calc(100% + 8px); left: 0;
+            background: rgba(1, 10, 20, 0.98);
+            border: 1px solid var(--hud-cyan);
+            padding: 16px; z-index: 2000;
+            min-width: 420px; max-width: 90vw;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.8), 0 0 20px rgba(0,242,255,0.05);
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 97% 100%, 0 100%);
+        }
+        .filter-panel.open { display: block; }
+
+        .panel-group { margin-bottom: 14px; }
+        .panel-group:last-child { margin-bottom: 0; }
+        .panel-group-label {
+            font-family: 'Cinzel', serif; font-size: 0.6rem;
+            color: rgba(0,242,255,0.45); letter-spacing: 3px;
+            margin-bottom: 8px; padding-bottom: 4px;
+            border-bottom: 1px solid rgba(0,242,255,0.1);
+        }
+        .panel-btns { display: flex; flex-wrap: wrap; gap: 6px; }
 
         .filter-btn {
             background: transparent; border: 1px solid var(--hud-border);
-            color: var(--hud-cyan); padding: 5px 12px;
-            font-size: 0.7rem; cursor: pointer;
+            color: var(--hud-cyan); padding: 4px 12px;
+            font-size: 0.68rem; cursor: pointer;
             font-family: 'Cinzel', serif; letter-spacing: 1px;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-            transition: background 0.3s, box-shadow 0.3s;
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+            transition: background 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
         }
-        .filter-btn:hover,
-        .filter-btn:focus-visible { background: rgba(0, 242, 255, 0.15); outline: none; }
-        .filter-btn.active { background: var(--hud-cyan); color: var(--bg-deep); font-weight: bold; box-shadow: 0 0 10px var(--hud-cyan); }
+        .filter-btn:hover { background: rgba(0,242,255,0.12); }
+        .filter-btn.active {
+            background: var(--hud-cyan); color: var(--bg-deep);
+            font-weight: bold; box-shadow: 0 0 8px rgba(0,242,255,0.4);
+            border-color: var(--hud-cyan);
+        }
 
         /* Sort toggle */
         .sort-toggle {
             background: transparent; border: 1px solid var(--hud-border);
-            color: var(--hud-cyan); padding: 5px 12px;
-            font-size: 0.7rem; cursor: pointer; white-space: nowrap;
+            color: var(--hud-cyan); padding: 6px 14px;
+            font-size: 0.72rem; cursor: pointer; white-space: nowrap;
             font-family: 'Cinzel', serif; letter-spacing: 1px;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
             transition: background 0.3s, box-shadow 0.3s;
-            flex-shrink: 0;
+            margin-left: auto;
         }
         .sort-toggle:hover,
-        .sort-toggle:focus-visible { background: rgba(0, 242, 255, 0.15); outline: none; }
-        .sort-toggle.active { background: rgba(212, 175, 55, 0.2); border-color: var(--accent-gold); color: var(--accent-gold); box-shadow: 0 0 8px rgba(212,175,55,0.3); }
+        .sort-toggle:focus-visible { background: rgba(0,242,255,0.1); outline: none; }
+        .sort-toggle.active { background: rgba(212,175,55,0.2); border-color: var(--accent-gold); color: var(--accent-gold); box-shadow: 0 0 8px rgba(212,175,55,0.3); }
 
         /* ── MAIN ── */
         .main-container { max-width: 1500px; margin: 0 auto; padding: 0 20px; }
@@ -273,9 +331,8 @@
             .oc-title { font-size: 1.1rem; }
             .oc-summary { font-size: 0.8rem; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
             .status-bar span:last-child { display: none; }
-            .filter-toggle { display: block; }
-            .filter-row { flex-direction: column; }
-            .sort-toggle { align-self: flex-start; }
+            .filter-panel { min-width: 90vw; }
+            .sort-toggle { margin-left: 0; }
         }
     </style>
 </head>
@@ -286,31 +343,56 @@
             <input type="text" id="searchInput" placeholder="SYSTEM_QUERY: ENTER DESIGNATION, CLASS, OR KEYWORD...">
         </div>
         <div class="filter-wrapper">
-            <button class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="filterContainer">
-                FILTER_BY_CLASS <span class="arrow">▼</span>
-            </button>
-            <div class="filter-row">
-                <nav class="filter-container collapsed" id="filterContainer" role="group" aria-label="Filter by class">
-                    <button class="filter-btn active" data-filter="all">ALL_FILES</button>
-                    <button class="filter-btn" data-filter="Servant">SERVANTS</button>
-                    <button class="filter-btn" data-filter="Master">MAGUS</button>
-                    <button class="filter-btn" data-filter="General">GENERAL_WORKS</button>
-                    <button class="filter-btn" data-filter="Saber">SABER</button>
-                    <button class="filter-btn" data-filter="Archer">ARCHER</button>
-                    <button class="filter-btn" data-filter="Lancer">LANCER</button>
-                    <button class="filter-btn" data-filter="Rider">RIDER</button>
-                    <button class="filter-btn" data-filter="Caster">CASTER</button>
-                    <button class="filter-btn" data-filter="Assassin">ASSASSIN</button>
-                    <button class="filter-btn" data-filter="Berserker">BERSERKER</button>
-                    <button class="filter-btn" data-filter="Extra">EXTRA_CLASSES</button>
-                    <button class="filter-btn" data-filter="Alter-Ego">ALTER-EGO</button>
-                    <button class="filter-btn" data-filter="Pretender">PRETENDER</button>
-                    <button class="filter-btn" data-filter="Avenger">AVENGER</button>
-                    <button class="filter-btn" data-filter="Ruler">RULER</button>
-                    <button class="filter-btn" data-filter="Shielder">SHIELDER</button>
-                    <button class="filter-btn" data-filter="Watcher">WATCHER</button>
-                    <button class="filter-btn" data-filter="Foreigner">FOREIGNER</button>
-                </nav>
+            <div class="filter-row" id="filterRow">
+
+                <!-- Dropdown trigger -->
+                <button class="filter-trigger" id="filterTrigger" aria-haspopup="true" aria-expanded="false">
+                    OC_TYPE_FILTER <span class="filter-badge hidden" id="filterBadge"></span><span class="ft-arrow">▼</span>
+                </button>
+
+                <!-- Dropdown panel -->
+                <div class="filter-panel" id="filterPanel" role="dialog" aria-label="Filter options">
+                    <div class="panel-group">
+                        <div class="panel-group-label">RECORD_TYPE</div>
+                        <div class="panel-btns">
+                            <button class="filter-btn" data-filter="Servant">SERVANTS</button>
+                            <button class="filter-btn" data-filter="Master">MAGUS</button>
+                            <button class="filter-btn" data-filter="General">GENERAL_WORKS</button>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel-group-label">STANDARD_CLASSES</div>
+                        <div class="panel-btns">
+                            <button class="filter-btn" data-filter="Saber">SABER</button>
+                            <button class="filter-btn" data-filter="Archer">ARCHER</button>
+                            <button class="filter-btn" data-filter="Lancer">LANCER</button>
+                            <button class="filter-btn" data-filter="Rider">RIDER</button>
+                            <button class="filter-btn" data-filter="Caster">CASTER</button>
+                            <button class="filter-btn" data-filter="Assassin">ASSASSIN</button>
+                            <button class="filter-btn" data-filter="Berserker">BERSERKER</button>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel-group-label">EXTRA_CLASSES</div>
+                        <div class="panel-btns">
+                            <button class="filter-btn" data-filter="Ruler">RULER</button>
+                            <button class="filter-btn" data-filter="Avenger">AVENGER</button>
+                            <button class="filter-btn" data-filter="Alter-Ego">ALTER-EGO</button>
+                            <button class="filter-btn" data-filter="Pretender">PRETENDER</button>
+                            <button class="filter-btn" data-filter="Shielder">SHIELDER</button>
+                            <button class="filter-btn" data-filter="Watcher">WATCHER</button>
+                            <button class="filter-btn" data-filter="Foreigner">FOREIGNER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active pills rendered here by JS -->
+                <div id="pillContainer" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;"></div>
+
+                <!-- Clear all -->
+                <button class="filter-clear hidden" id="filterClear">✕ CLEAR_ALL</button>
+
+                <!-- Sort -->
                 <button class="sort-toggle" id="sortToggle" aria-pressed="false" title="Toggle sort by recently added">
                     SORT: RECENTLY_ADDED
                 </button>
@@ -325,14 +407,18 @@
                 <h2 style="font-family: 'Cinzel'; font-size: 1.2rem;">TERMINAL_USER_ID</h2>
             </div>
             <div class="profile-card">
-                <img src="/assets/img/profile.jpg"
+                <img src="/assets/img/G18PXsaaMAE21Rj.jpg"
                      onerror="this.src='https://placehold.co/400x400/01080f/00f2ff?text=PORTRAIT'"
                      alt="User Avatar" class="profile-img">
                 <div style="padding: 5px 15px;">
-                    <h3 style="color: var(--hud-cyan); font-size: 2rem; font-family: 'Cinzel'; margin-bottom: 10px;">MAGUS_DATA_NODE</h3>
+                    <h3 style="color: var(--hud-cyan); font-size: 2rem; font-family: 'Cinzel'; margin-bottom: 10px;">ARCHETYPE_NARRATOR</h3>
                     <p style="color: #a0c0d0; line-height: 1.6; font-weight: 300;">
-                        Operational status nominal. Database reflects active Servant manifestations and Master candidates.
-                        Records are prioritized by Saint Graph classification. Select a node to initiate deep-link synchronization.
+                    Nasu TLs:
+                    https://shorturl.at/wprwq
+                    Philhellenist | Sinophile | Philomath 
+
+                    "If it makes Kallen smile again... go ahead. My life is yours."
+                    https://www.youtube.com/watch?v=lsjQy6OeS54&vl=en
                     </p>
                 </div>
             </div>
@@ -364,20 +450,24 @@
     <script>
         const EXTRA_CLASSES = new Set(['Alter-Ego','Pretender','Avenger','Ruler','Shielder','Watcher','Foreigner']);
 
-        let sortMode = 'priority';
+        let sortMode   = 'priority';
         let allEntries = [];
+        let activeFilters = new Set(); // multi-select
 
         // ── ELEMENT REFS ──
-        const mainGrid        = document.getElementById('mainGrid');
-        const searchInput     = document.getElementById('searchInput');
-        const scrollBtn       = document.getElementById('scrollTop');
-        const noResults       = document.getElementById('noResults');
-        const loadError       = document.getElementById('loadError');
-        const counterDisplay  = document.getElementById('counterDisplay');
-        const filterToggle    = document.getElementById('filterToggle');
-        const filterContainer = document.getElementById('filterContainer');
-        const controlPanel    = document.getElementById('controlPanel');
-        const sortToggle      = document.getElementById('sortToggle');
+        const mainGrid       = document.getElementById('mainGrid');
+        const searchInput    = document.getElementById('searchInput');
+        const scrollBtn      = document.getElementById('scrollTop');
+        const noResults      = document.getElementById('noResults');
+        const loadError      = document.getElementById('loadError');
+        const counterDisplay = document.getElementById('counterDisplay');
+        const controlPanel   = document.getElementById('controlPanel');
+        const sortToggle     = document.getElementById('sortToggle');
+        const filterTrigger  = document.getElementById('filterTrigger');
+        const filterPanel    = document.getElementById('filterPanel');
+        const filterBadge    = document.getElementById('filterBadge');
+        const filterClear    = document.getElementById('filterClear');
+        const pillContainer  = document.getElementById('pillContainer');
 
         // ── DYNAMIC HEADER HEIGHT ──
         function syncHeaderHeight() {
@@ -387,26 +477,87 @@
         new ResizeObserver(syncHeaderHeight).observe(controlPanel);
         syncHeaderHeight();
 
-        // ── MOBILE FILTER TOGGLE ──
-        filterToggle.addEventListener('click', () => {
-            const isOpen = !filterContainer.classList.contains('collapsed');
-            filterContainer.classList.toggle('collapsed', isOpen);
-            filterToggle.classList.toggle('open', !isOpen);
-            filterToggle.setAttribute('aria-expanded', String(!isOpen));
+        // ── DROPDOWN OPEN/CLOSE ──
+        filterTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = filterPanel.classList.toggle('open');
+            filterTrigger.classList.toggle('open', isOpen);
+            filterTrigger.setAttribute('aria-expanded', String(isOpen));
         });
 
-        const mq = window.matchMedia('(min-width: 901px)');
-        function handleMQ(e) {
-            if (e.matches) {
-                filterContainer.classList.remove('collapsed');
-            } else {
-                filterContainer.classList.add('collapsed');
-                filterToggle.classList.remove('open');
-                filterToggle.setAttribute('aria-expanded', 'false');
+        document.addEventListener('click', (e) => {
+            if (!filterPanel.contains(e.target) && e.target !== filterTrigger) {
+                filterPanel.classList.remove('open');
+                filterTrigger.classList.remove('open');
+                filterTrigger.setAttribute('aria-expanded', 'false');
             }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                filterPanel.classList.remove('open');
+                filterTrigger.classList.remove('open');
+                filterTrigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // ── FILTER BUTTONS (multi-select toggle) ──
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const f = this.dataset.filter;
+                if (activeFilters.has(f)) {
+                    activeFilters.delete(f);
+                    this.classList.remove('active');
+                } else {
+                    activeFilters.add(f);
+                    this.classList.add('active');
+                }
+                renderPills();
+                updateUI();
+            });
+        });
+
+        // ── PILLS ──
+        function renderPills() {
+            pillContainer.innerHTML = '';
+            const count = activeFilters.size;
+
+            // Badge on trigger button
+            if (count > 0) {
+                filterBadge.textContent = count;
+                filterBadge.classList.remove('hidden');
+                filterClear.classList.remove('hidden');
+            } else {
+                filterBadge.classList.add('hidden');
+                filterClear.classList.add('hidden');
+            }
+
+            // One pill per active filter
+            activeFilters.forEach(f => {
+                const pill = document.createElement('button');
+                pill.className = 'active-pill';
+                pill.innerHTML = `${f.toUpperCase()} <span class="pill-x">✕</span>`;
+                pill.addEventListener('click', () => {
+                    activeFilters.delete(f);
+                    const btn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+                    if (btn) btn.classList.remove('active');
+                    renderPills();
+                    updateUI();
+                });
+                pillContainer.appendChild(pill);
+            });
+
+            syncHeaderHeight();
         }
-        mq.addEventListener('change', handleMQ);
-        handleMQ(mq);
+
+        // ── CLEAR ALL ──
+        filterClear.addEventListener('click', () => {
+            activeFilters.clear();
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            renderPills();
+            updateUI();
+        });
 
         // ── SORT TOGGLE ──
         sortToggle.addEventListener('click', () => {
@@ -540,21 +691,25 @@
         }
 
         // ── FILTER + SEARCH ──
+        function cardMatchesFilters(card) {
+            if (activeFilters.size === 0) return true;
+            for (const f of activeFilters) {
+                const typeMatch = card.dataset.type === f
+                    || (card.dataset.type === 'General Works' && f === 'General');
+                const subMatch  = card.dataset.sub === f;
+                const extraMatch = f === 'Extra' && EXTRA_CLASSES.has(card.dataset.sub);
+                if (typeMatch || subMatch || extraMatch) return true;
+            }
+            return false;
+        }
+
         function updateUI() {
             const query  = searchInput.value.toLowerCase().trim();
-            const active = document.querySelector('.filter-btn.active');
-            const filter = active ? active.dataset.filter : 'all';
             let visible  = 0;
 
             document.querySelectorAll('.oc-card').forEach(card => {
-                const matchesSearch = !query || card.dataset.search.includes(query);
-                const matchesFilter =
-                    filter === 'all'
-                    || (filter === 'Extra' && EXTRA_CLASSES.has(card.dataset.sub))
-                    || card.dataset.type === filter
-                    || card.dataset.type === 'General Works' && filter === 'General'
-                    || card.dataset.sub  === filter;
-
+                const matchesSearch  = !query || card.dataset.search.includes(query);
+                const matchesFilter  = cardMatchesFilters(card);
                 const show = matchesSearch && matchesFilter;
                 card.classList.toggle('hidden', !show);
                 if (show) visible++;
@@ -577,19 +732,6 @@
         }, { passive: true });
 
         scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // ── FILTER BUTTONS ──
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                updateUI();
-            });
-            btn.addEventListener('keydown', e => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
-            });
-        });
-
         searchInput.addEventListener('input', updateUI);
 
         loadData();
