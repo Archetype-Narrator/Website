@@ -1,13 +1,13 @@
 [
     {
-        "title": "Artoria Pendragon",
+        "title": "The Lady Of The Lake",
         "type": "Servant",
         "sub": "Saber",
         "color": "color-servant",
-        "img": "assets/img/artoria.jpg",
+        "img": "assets/img/ba92ef648d27df495beb1eee187a7f641de23e25",
         "imgFallback": "https://images.unsplash.com/photo-1580130281216-33b47f45a3c3?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
-        "summary": "The King of Knights. A noble warrior who wields the holy sword Excalibur. Her data reflects high performance in direct combat scenarios.",
+        "summary": "The Legendary Lady Of The Lake.",
         "dateAdded": "2026-01-01"
     },
     {
@@ -15,7 +15,7 @@
         "type": "Master",
         "sub": "Master",
         "color": "color-master",
-        "img": "assets/img/ritsuka.jpg",
+        "img": "assets/img/ba92ef648d27df495beb1eee187a7f641de23e25",
         "imgFallback": "https://images.unsplash.com/photo-1560972550-aba3456b5564?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
         "summary": "Final Master of humanity. Possesses exceptional compatibility with a vast range of Heroic Spirits. Strategic capability: High.",
@@ -33,25 +33,25 @@
         "dateAdded": "2026-01-02"
     },
     {
-        "title": "Jeanne d'Arc",
+        "title": "Vivian",
         "type": "Servant",
         "sub": "Ruler",
         "color": "color-servant",
-        "img": "assets/img/jeanne.jpg",
+        "img": "assets/img/ba92ef648d27df495beb1eee187a7f641de23e25",
         "imgFallback": "https://images.unsplash.com/photo-1614728263952-84ea206f99b6?q=80&w=400",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
-        "summary": "Ruler-class manifestation. The Holy Maiden of Orléans. Acts as an arbiter for the Holy Grail War to ensure balance.",
+        "summary": "R",
         "dateAdded": "2026-01-03"
     },
     {
-        "title": "Alter-Ego Node 1",
+        "title": "Vivian",
         "type": "Servant",
         "sub": "Alter-Ego",
         "color": "color-servant",
-        "img": "assets/img/alterego1.jpg",
+        "img": "assets/img/ba92ef648d27df495beb1eee187a7f641de23e25",
         "imgFallback": "https://placehold.co/400x600/01080f/cc44ff?text=ALTER-EGO",
         "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
-        "summary": "Composite spiritual body born from the fusion of multiple Heroic Spirit aspects. Classification: Extra. Saint Graph status: fragmented.",
+        "summary": "Co",
         "dateAdded": "2026-01-04"
     },
     {
