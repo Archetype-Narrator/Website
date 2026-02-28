@@ -8,7 +8,7 @@
         "imgFallback": "https://images.unsplash.com/photo-1580130281216-33b47f45a3c3?q=80&w=400",
         "link": "https://docs.google.com/document/d/1nKnf9Zs4eUJ4K9YReu0t58GAd-K_AZHK_tqyLvGKUqc/edit?usp=sharing",
         "summary": "The Lady of the Lake, also known as Vivian or Nimue, according to legend, she is most famous for giving Arthur the magical sword Excalibur, for fostering Sir Lancelot after his father's death and for imprisoning Merlin in a Tower or Tree or at times; a Cave.",
-        "dateAdded": "2026-01-02"
+        "dateAdded": "2026-02-02"
     },
     {
         "title": "Saber Placeholder",
@@ -167,16 +167,16 @@
         "wip": true
     },
     {
-        "title": "Magus Record 1",
+        "title": "Astrid Diamantopoulou",
         "type": "Master",
         "sub": "Master",
         "color": "color-master",
-        "img": "",
+        "img": "assets/img/abcb07a1962c6c98f6a498a4068b840dc3a139d6.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
-        "link": "#",
-        "summary": "Magus candidate file pending. Circuit analysis and credential verification in progress.",
-        "dateAdded": "2026-02-01",
-        "wip": true
+        "link": "https://docs.google.com/document/d/1DPb8K7XYqF-c-WOe03eQioBbeC8TFQrR_KiY1u9RtW8/edit?usp=sharing",
+        "summary": "Astrid Diamantopoulou, also known as Blue Stargazer, is the acting head of the Diamantis Family and supporting heroine of Fate/Revelation. She appears as the protagonist of Fate/Astra in her youth. She once sought to fulfill the Grand Order of her Family as was expected of her, but she came to develop her own Grand Order, and cast her gaze on the starry seas. ",
+        "dateAdded": "2026-02-02",
+        "wip": false
     },
     {
         "title": "Magus Record 2",
@@ -215,28 +215,28 @@
         "wip": true
     },
     {
-        "title": "General Works 1",
+        "title": "Hina Hasegawa",
         "type": "General Works",
         "sub": "General Works",
         "color": "color-general",
-        "img": "",
+        "img": "assets/img/42a600f7e5880afad5e36c635096ea6d011df95e.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
-        "link": "#",
-        "summary": "Non-fate Character detected.",
-        "dateAdded": "2026-02-01",
-        "wip": true
+        "link": "https://docs.google.com/document/d/1AY9AaYINxKLkn3n9U7o18o_Qho4VLdv--rl8G-kCcuI/edit?usp=sharing",
+        "summary": "The Shadow of Arasaka is somebody that most people don’t agree on the existence of. From time to time, the Shadow will be brought up as a horror story that spread around to discourage action against Arasaka. Others believe it to just be a story based on a long past person. The truth is uncertain, what is certain is that the Shadow of Arasaka is only a story that can be told in full by those sitting at the top of their respective Corporations.",
+        "dateAdded": "2026-02-02",
+        "wip": false
     },
     {
-        "title": "General Works 2",
+        "title": "Sophia Tokunaga",
         "type": "General Works",
         "sub": "General Works",
         "color": "color-general",
-        "img": "",
+        "img": "assets/img/72b1dea5327262b16f36dc0ea34a3581d861bbf2.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
-        "link": "#",
-        "summary": "Non-fate Character detected.",
-        "dateAdded": "2026-02-01",
-        "wip": true
+        "link": "https://docs.google.com/document/d/1GjuZF5JnwQGU8ghWprkX5FYIGq8qk4Ut0Ujbk_CQ6dg/edit?usp=sharing",
+        "summary": "A Freelance Media often known under the handle of “Harmony” and recognized by her special insignia. She is often the source behind big stories exposing the misdeeds of corpos yet is rarely the one running the story herself. Often selling off stories to media outlets who’d find benefit in running stories that negatively impact the reputation of rival corpos for little pay. She rather asks for the condition of being given explicit credit as a source over high pay for those stories..",
+        "dateAdded": "2026-02-02",
+        "wip": false
     },
     {
         "title": "General Works 3",
