@@ -1,0 +1,6 @@
+# Add URL redirects here as your site grows.
+# Format: /old-path   /new-path   301
+#
+# Examples:
+# /old-page      /new-page      301
+# /archive       /              301

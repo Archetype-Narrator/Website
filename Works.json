@@ -1,0 +1,200 @@
+[
+    {
+        "title": "Artoria Pendragon",
+        "type": "Servant",
+        "sub": "Saber",
+        "color": "color-servant",
+        "img": "assets/img/artoria.jpg",
+        "imgFallback": "https://images.unsplash.com/photo-1580130281216-33b47f45a3c3?q=80&w=400",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "The King of Knights. A noble warrior who wields the holy sword Excalibur. Her data reflects high performance in direct combat scenarios.",
+        "dateAdded": "2026-01-01"
+    },
+    {
+        "title": "Ritsuka Fujimaru",
+        "type": "Master",
+        "sub": "Master",
+        "color": "color-master",
+        "img": "assets/img/ritsuka.jpg",
+        "imgFallback": "https://images.unsplash.com/photo-1560972550-aba3456b5564?q=80&w=400",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Final Master of humanity. Possesses exceptional compatibility with a vast range of Heroic Spirits. Strategic capability: High.",
+        "dateAdded": "2026-01-01"
+    },
+    {
+        "title": "Singularity Analysis",
+        "type": "General",
+        "sub": "General",
+        "color": "color-general",
+        "img": "assets/img/singularity.jpg",
+        "imgFallback": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=400",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Comprehensive data regarding spatial-temporal distortions and historical collapse points. Essential for Rayshift navigation.",
+        "dateAdded": "2026-01-02"
+    },
+    {
+        "title": "Jeanne d'Arc",
+        "type": "Servant",
+        "sub": "Ruler",
+        "color": "color-servant",
+        "img": "assets/img/jeanne.jpg",
+        "imgFallback": "https://images.unsplash.com/photo-1614728263952-84ea206f99b6?q=80&w=400",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Ruler-class manifestation. The Holy Maiden of Orléans. Acts as an arbiter for the Holy Grail War to ensure balance.",
+        "dateAdded": "2026-01-03"
+    },
+    {
+        "title": "Alter-Ego Node 1",
+        "type": "Servant",
+        "sub": "Alter-Ego",
+        "color": "color-servant",
+        "img": "assets/img/alterego1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/cc44ff?text=ALTER-EGO",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Composite spiritual body born from the fusion of multiple Heroic Spirit aspects. Classification: Extra. Saint Graph status: fragmented.",
+        "dateAdded": "2026-01-04"
+    },
+    {
+        "title": "Alter-Ego Node 2",
+        "type": "Servant",
+        "sub": "Alter-Ego",
+        "color": "color-servant",
+        "img": "assets/img/alterego2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/cc44ff?text=ALTER-EGO",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Divergent manifestation exhibiting dual-origin Saint Graph structure. Origin unknown. Threat assessment: elevated.",
+        "dateAdded": "2026-01-04"
+    },
+    {
+        "title": "Pretender Node 1",
+        "type": "Servant",
+        "sub": "Pretender",
+        "color": "color-servant",
+        "img": "assets/img/pretender1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Heroic Spirit manifesting under a false identity. True name obscured. Alignment and Noble Phantasm classification: REDACTED.",
+        "dateAdded": "2026-01-05"
+    },
+    {
+        "title": "Pretender Node 2",
+        "type": "Servant",
+        "sub": "Pretender",
+        "color": "color-servant",
+        "img": "assets/img/pretender2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Parameters intentionally misreported. Saint Graph appears to simulate another class container as primary camouflage layer.",
+        "dateAdded": "2026-01-05"
+    },
+    {
+        "title": "Avenger Node 1",
+        "type": "Servant",
+        "sub": "Avenger",
+        "color": "color-servant",
+        "img": "assets/img/avenger1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/880000?text=AVENGER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Vessel of accumulated curses and resentment. Designated Extra-class due to inherent hostility toward humanity itself.",
+        "dateAdded": "2026-01-06"
+    },
+    {
+        "title": "Avenger Node 2",
+        "type": "Servant",
+        "sub": "Avenger",
+        "color": "color-servant",
+        "img": "assets/img/avenger2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/880000?text=AVENGER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Manifested with inverse alignment values. High self-damage potential noted. Handle with Chaldea-grade bounded field protocols.",
+        "dateAdded": "2026-01-06"
+    },
+    {
+        "title": "Ruler Node 1",
+        "type": "Servant",
+        "sub": "Ruler",
+        "color": "color-servant",
+        "img": "assets/img/ruler1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/f0e060?text=RULER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Summoned under direct Divine Spirit authorization to oversee Holy Grail War integrity. Carries two Command Seals as standard.",
+        "dateAdded": "2026-01-07"
+    },
+    {
+        "title": "Ruler Node 2",
+        "type": "Servant",
+        "sub": "Ruler",
+        "color": "color-servant",
+        "img": "assets/img/ruler2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/f0e060?text=RULER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Impartial arbitration authority. Classified resistance to Noble Phantasm interference. Priority: neutrality over victory.",
+        "dateAdded": "2026-01-07"
+    },
+    {
+        "title": "Shielder Node 1",
+        "type": "Servant",
+        "sub": "Shielder",
+        "color": "color-servant",
+        "img": "assets/img/shielder1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/4488ff?text=SHIELDER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Defensive-specialist class container. Saint Graph optimized for protection and endurance over offensive output. Loyalty index: absolute.",
+        "dateAdded": "2026-01-08"
+    },
+    {
+        "title": "Shielder Node 2",
+        "type": "Servant",
+        "sub": "Shielder",
+        "color": "color-servant",
+        "img": "assets/img/shielder2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/4488ff?text=SHIELDER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Unique manifestation exhibiting near-zero Mystery exposure. Classified as incomplete Heroic Spirit — potential for growth: maximum.",
+        "dateAdded": "2026-01-08"
+    },
+    {
+        "title": "Watcher Node 1",
+        "type": "Servant",
+        "sub": "Watcher",
+        "color": "color-servant",
+        "img": "assets/img/watcher1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/aaffee?text=WATCHER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Non-standard manifestation. Does not act directly. Observational presence only — interference with the timeline remains unconfirmed.",
+        "dateAdded": "2026-01-09"
+    },
+    {
+        "title": "Watcher Node 2",
+        "type": "Servant",
+        "sub": "Watcher",
+        "color": "color-servant",
+        "img": "assets/img/watcher2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/aaffee?text=WATCHER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Entity classified beyond conventional Saint Graph parameters. Nature: unclear. Recommend observation protocol Sigma-7.",
+        "dateAdded": "2026-01-09"
+    },
+    {
+        "title": "Foreigner Node 1",
+        "type": "Servant",
+        "sub": "Foreigner",
+        "color": "color-servant",
+        "img": "assets/img/foreigner1.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/7744cc?text=FOREIGNER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Saint Graph contaminated by Outer God influence. Standard parameters inapplicable. Sanity index: unstable. Do not establish direct link.",
+        "dateAdded": "2026-01-10"
+    },
+    {
+        "title": "Foreigner Node 2",
+        "type": "Servant",
+        "sub": "Foreigner",
+        "color": "color-servant",
+        "img": "assets/img/foreigner2.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/7744cc?text=FOREIGNER",
+        "link": "https://docs.google.com/document/d/YOUR_DOC_ID_HERE",
+        "summary": "Heroic Spirit acting as vessel for entities beyond the Texture. Noble Phantasm origin: void-adjacent. Classification: Extra — Abyssal.",
+        "dateAdded": "2026-01-10"
+    }
+]
