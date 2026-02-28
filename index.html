@@ -293,8 +293,8 @@
                 <nav class="filter-container collapsed" id="filterContainer" role="group" aria-label="Filter by class">
                     <button class="filter-btn active" data-filter="all">ALL_FILES</button>
                     <button class="filter-btn" data-filter="Servant">SERVANTS</button>
-                    <button class="filter-btn" data-filter="Master">MASTERS</button>
-                    <button class="filter-btn" data-filter="General">GENERAL</button>
+                    <button class="filter-btn" data-filter="Master">MAGUS</button>
+                    <button class="filter-btn" data-filter="General">GENERAL_WORKS</button>
                     <button class="filter-btn" data-filter="Saber">SABER</button>
                     <button class="filter-btn" data-filter="Archer">ARCHER</button>
                     <button class="filter-btn" data-filter="Lancer">LANCER</button>
@@ -441,7 +441,7 @@
                     return db - da;
                 });
             }
-            const priority = { "Servant": 1, "Master": 2, "General": 3 };
+            const priority = { "Servant": 1, "Master": 2, "General Works": 3 };
             return [...entries].sort((a, b) => (priority[a.type] ?? 99) - (priority[b.type] ?? 99));
         }
 
@@ -552,6 +552,7 @@
                     filter === 'all'
                     || (filter === 'Extra' && EXTRA_CLASSES.has(card.dataset.sub))
                     || card.dataset.type === filter
+                    || card.dataset.type === 'General Works' && filter === 'General'
                     || card.dataset.sub  === filter;
 
                 const show = matchesSearch && matchesFilter;
