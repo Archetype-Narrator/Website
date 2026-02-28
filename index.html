@@ -6,16 +6,16 @@
     <title>CHALDEA | Terminal Archive</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Open Graph / Discord / Twitter preview -->
     <meta name="description" content="Chaldea Terminal Archive — a classified database of Servant manifestations, Master candidates, and Singularity records.">
     <meta property="og:title" content="CHALDEA | Terminal Archive">
     <meta property="og:description" content="Classified database of Servant manifestations, Master candidates, and Singularity records.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/img/og-preview.jpg">
+    <meta property="og:image" content="https://archetype-narrator.github.io/Website/assets/img/og-preview.jpg">
     <!-- Update og:url once you have your Cloudflare Pages domain -->
-    <meta property="og:url" content="narratoranalect.com">
+    <meta property="og:url" content="https://archetype-narrator.github.io/Website">
     <meta name="twitter:card" content="summary_large_image">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
@@ -407,7 +407,7 @@
                 <h2 style="font-family: 'Cinzel'; font-size: 1.2rem;">TERMINAL_USER_ID</h2>
             </div>
             <div class="profile-card">
-                <img src="/assets/img/G18PXsaaMAE21Rj.jpg"
+                <img src="assets/img/G18PXsaaMAE21Rj.jpg"
                      onerror="this.src='https://placehold.co/400x400/01080f/00f2ff?text=PORTRAIT'"
                      alt="User Avatar" class="profile-img">
                 <div style="padding: 5px 15px;">
@@ -570,7 +570,7 @@
         // ── LOAD DATA ──
         async function loadData() {
             try {
-                const res = await fetch('Works.json');
+                const res = await fetch('Works.json?v=1');
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 allEntries = await res.json();
                 rebuildGrid();
