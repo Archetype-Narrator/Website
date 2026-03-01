@@ -462,7 +462,7 @@
         const EXTRA_CLASSES = new Set(['Alter-Ego','Pretender','Avenger','Ruler','Shielder','Watcher','Foreigner']);
 
         let sortMode   = 'priority';
-        let wipSort    = 'last';   // 'last' = WIP at end (default), 'first' = WIP at top, 'off' = no WIP separation
+        let wipSort    = 'last';   
         let allEntries = [];
         let activeFilters = new Set(); 
 
@@ -582,7 +582,7 @@
             rebuildGrid();
         });
 
-        // ── WIP SORT TOGGLE (cycles: last → first → off → last) ──
+        
         wipToggle.addEventListener('click', () => {
             if (wipSort === 'last')       wipSort = 'first';
             else if (wipSort === 'first') wipSort = 'off';
@@ -629,13 +629,13 @@
                 sorted = [...entries].sort((a, b) => (priority[a.type] ?? 99) - (priority[b.type] ?? 99));
             }
 
-            // Apply WIP ordering on top of primary sort (stable, preserves relative order within groups)
+            
             if (wipSort === 'last') {
                 sorted.sort((a, b) => (a.wip ? 1 : 0) - (b.wip ? 1 : 0));
             } else if (wipSort === 'first') {
                 sorted.sort((a, b) => (b.wip ? 1 : 0) - (a.wip ? 1 : 0));
             }
-            // 'off' = no additional WIP sort, keep primary order as-is
+           
 
             return sorted;
         }
