@@ -146,20 +146,29 @@
             border: 1px solid var(--hud-cyan);
             padding: 16px; z-index: 2000;
             min-width: 420px; max-width: 90vw;
+            max-height: 70vh; overflow-y: auto;
             box-shadow: 0 8px 40px rgba(0,0,0,0.8), 0 0 20px rgba(0,242,255,0.05);
             clip-path: polygon(0 0, 100% 0, 100% 95%, 97% 100%, 0 100%);
+            scrollbar-width: thin; scrollbar-color: var(--hud-border) transparent;
         }
         .filter-panel.open { display: block; }
 
-        .panel-group { margin-bottom: 14px; }
+        .panel-group { margin-bottom: 12px; }
         .panel-group:last-child { margin-bottom: 0; }
         .panel-group-label {
             font-family: 'Cinzel', serif; font-size: 0.6rem;
-            color: rgba(0,242,255,0.45); letter-spacing: 3px;
-            margin-bottom: 8px; padding-bottom: 4px;
+            color: rgba(0,242,255,0.55); letter-spacing: 3px;
+            margin-bottom: 8px; padding: 4px 0;
             border-bottom: 1px solid rgba(0,242,255,0.1);
+            cursor: pointer; user-select: none;
+            display: flex; align-items: center; justify-content: space-between;
+            transition: color 0.2s;
         }
-        .panel-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+        .panel-group-label:hover { color: var(--hud-cyan); }
+        .panel-group-label .pg-arrow { font-size: 0.55rem; transition: transform 0.2s; }
+        .panel-group.collapsed .pg-arrow { transform: rotate(-90deg); }
+        .panel-group.collapsed .panel-btns { display: none; }
+        .panel-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 2px; }
 
         .filter-btn {
             background: transparent; border: 1px solid var(--hud-border);
@@ -334,15 +343,44 @@
         
         @media (max-width: 900px) {
             .grid { grid-template-columns: 1fr; }
-            .profile-card { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 15px; }
-            .profile-img { width: 140px; height: 140px; }
-            .oc-frame { min-height: 180px; }
-            .oc-thumb { width: 120px; }
-            .oc-title { font-size: 1.1rem; }
-            .oc-summary { font-size: 0.8rem; -webkit-line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+            .profile-card {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 15px;
+                padding: 18px;
+            }
+            .profile-img {
+                width: 100px; height: 100px;
+                display: block;
+            }
+            .profile-card > div { padding: 0 !important; }
+            .profile-card h3 { font-size: 1.3rem !important; }
+            .profile-card p { font-size: 0.85rem !important; line-height: 1.7 !important; }
+            .oc-frame { min-height: 140px; }
+            .oc-thumb { width: 100px; }
+            .oc-title { font-size: 1rem; }
+            .oc-summary {
+                font-size: 0.82rem;
+                overflow: visible;
+                display: block;
+                -webkit-line-clamp: unset;
+                -webkit-box-orient: unset;
+            }
+            .oc-tag { font-size: 0.72rem; }
+            .oc-body { padding: 12px; gap: 6px; }
             .status-bar span:last-child { display: none; }
-            .filter-panel { min-width: 90vw; }
+            .filter-panel { min-width: min(420px, 92vw); max-height: 60vh; }
             .sort-toggle { margin-left: 0; }
+            .filter-row { gap: 7px; }
+        }
+        @media (max-width: 480px) {
+            .oc-thumb { width: 80px; }
+            .oc-title { font-size: 0.92rem; }
+            .oc-summary { font-size: 0.78rem; }
+            .profile-card h3 { font-size: 1.1rem !important; }
+            .control-panel { padding: 10px 12px; }
+            #searchInput { font-size: 0.88rem; padding: 10px 14px; }
+            .filter-trigger, .sort-toggle, .wip-toggle { font-size: 0.65rem; padding: 5px 10px; }
         }
     </style>
 </head>
@@ -363,7 +401,7 @@
                 
                 <div class="filter-panel" id="filterPanel" role="dialog" aria-label="Filter options">
                     <div class="panel-group">
-                        <div class="panel-group-label">RECORD_TYPE</div>
+                        <div class="panel-group-label" data-group="record-type">RECORD_TYPE <span class="pg-arrow">▼</span></div>
                         <div class="panel-btns">
                             <button class="filter-btn" data-filter="Servant">SERVANTS</button>
                             <button class="filter-btn" data-filter="Master">MAGUS</button>
@@ -371,7 +409,7 @@
                         </div>
                     </div>
                     <div class="panel-group">
-                        <div class="panel-group-label">STANDARD_CLASSES</div>
+                        <div class="panel-group-label" data-group="standard-classes">STANDARD_CLASSES <span class="pg-arrow">▼</span></div>
                         <div class="panel-btns">
                             <button class="filter-btn" data-filter="Saber">SABER</button>
                             <button class="filter-btn" data-filter="Archer">ARCHER</button>
@@ -383,7 +421,7 @@
                         </div>
                     </div>
                     <div class="panel-group">
-                        <div class="panel-group-label">EXTRA_CLASSES</div>
+                        <div class="panel-group-label" data-group="extra-classes">EXTRA_CLASSES <span class="pg-arrow">▼</span></div>
                         <div class="panel-btns">
                             <button class="filter-btn" data-filter="Ruler">RULER</button>
                             <button class="filter-btn" data-filter="Avenger">AVENGER</button>
@@ -392,6 +430,34 @@
                             <button class="filter-btn" data-filter="Shielder">SHIELDER</button>
                             <button class="filter-btn" data-filter="Watcher">WATCHER</button>
                             <button class="filter-btn" data-filter="Foreigner">FOREIGNER</button>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel-group-label" data-group="magus-types">MAGUS_TYPES <span class="pg-arrow">▼</span></div>
+                        <div class="panel-btns">
+                            <button class="filter-btn" data-filter="Grand">GRAND</button>
+                            <button class="filter-btn" data-filter="Brand">BRAND</button>
+                            <button class="filter-btn" data-filter="Pride">PRIDE</button>
+                            <button class="filter-btn" data-filter="Fes">FES</button>
+                            <button class="filter-btn" data-filter="Cause">CAUSE</button>
+                            <button class="filter-btn" data-filter="Frame">FRAME</button>
+                            <button class="filter-btn" data-filter="Baldandar">BALDANDAR</button>
+                            <button class="filter-btn" data-filter="Atlas Alchemist">ATLAS_ALCHEMIST</button>
+                            <button class="filter-btn" data-filter="Eastern Magus">EASTERN_MAGUS</button>
+                            <button class="filter-btn" data-filter="Burial Agent">BURIAL_AGENT</button>
+                            <button class="filter-btn" data-filter="Executor">EXECUTOR</button>
+                            <button class="filter-btn" data-filter="Dead Apostle">DEAD_APOSTLE</button>
+                            <button class="filter-btn" data-filter="Spellcaster">SPELLCASTER</button>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel-group-label" data-group="general-works-types">GENERAL_WORKS_TYPES <span class="pg-arrow">▼</span></div>
+                        <div class="panel-btns">
+                            <button class="filter-btn" data-filter="OC Setting">OC_SETTING</button>
+                            <button class="filter-btn" data-filter="Cyberpunk">CYBERPUNK</button>
+                            <button class="filter-btn" data-filter="Re: Zero">RE:_ZERO</button>
+                            <button class="filter-btn" data-filter="MHA">MHA</button>
+                            <button class="filter-btn" data-filter="Others">OTHERS</button>
                         </div>
                     </div>
                 </div>
@@ -515,6 +581,13 @@
         });
 
         
+        document.querySelectorAll('.panel-group-label').forEach(label => {
+            label.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.closest('.panel-group').classList.toggle('collapsed');
+            });
+        });
+
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -604,7 +677,7 @@
         
         async function loadData() {
             try {
-                const res = await fetch('Works.json?v=1');
+                const res = await fetch('Works.json?t=' + Date.now());
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 allEntries = await res.json();
                 rebuildGrid();
@@ -735,12 +808,15 @@
         }
 
         
+        const MAGUS_TYPES = new Set(['Grand','Brand','Pride','Fes','Cause','Frame','Baldandar','Atlas Alchemist','Eastern Magus','Burial Agent','Executor','Dead Apostle','Spellcaster']);
+        const GW_TYPES    = new Set(['OC Setting','Cyberpunk','Re: Zero','MHA','Others']);
+
         function cardMatchesFilters(card) {
             if (activeFilters.size === 0) return true;
             for (const f of activeFilters) {
-                const typeMatch = card.dataset.type === f
+                const typeMatch  = card.dataset.type === f
                     || (card.dataset.type === 'General Works' && f === 'General');
-                const subMatch  = card.dataset.sub === f;
+                const subMatch   = card.dataset.sub === f;
                 const extraMatch = f === 'Extra' && EXTRA_CLASSES.has(card.dataset.sub);
                 if (typeMatch || subMatch || extraMatch) return true;
             }

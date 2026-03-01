@@ -194,7 +194,7 @@
     {
         "title": "Astrid Diamantopoulou",
         "type": "Master",
-        "sub": "Master",
+        "sub": "Grand",
         "color": "color-master",
         "img": "assets/img/abcb07a1962c6c98f6a498a4068b840dc3a139d6.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
@@ -206,7 +206,7 @@
     {
         "title": "Celeste Turgard",
         "type": "Master",
-        "sub": "Master",
+        "sub": "Pride",
         "color": "color-master",
         "img": "assets/img/G3NFiU1bsAA2cHU.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
@@ -218,7 +218,7 @@
     {
         "title": "Melpomeni Cosmo Othonos",
         "type": "Master",
-        "sub": "Master",
+        "sub": "Brand",
         "color": "color-master",
         "img": "",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
@@ -230,7 +230,7 @@
     {
         "title": "???",
         "type": "Master",
-        "sub": "Master",
+        "sub": "Burial Agent",
         "color": "color-master",
         "img": "assets/img/188d15e988cbde157e765946923688495bbbb08b.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
@@ -242,7 +242,7 @@
         {
         "title": "???",
         "type": "Master",
-        "sub": "Master",
+        "sub": "Executor",
         "color": "color-master",
         "img": "assets/img/ce878eb0bfe1e6a7e6e3c4bee0abe361191bdab4.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
@@ -254,7 +254,7 @@
     {
         "title": "Hina Hasegawa",
         "type": "General Works",
-        "sub": "General Works",
+        "sub": "Cyberpunk",
         "color": "color-general",
         "img": "assets/img/42a600f7e5880afad5e36c635096ea6d011df95e.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
@@ -266,7 +266,7 @@
     {
         "title": "Sophia Tokunaga",
         "type": "General Works",
-        "sub": "General Works",
+        "sub": "Cyberpunk",
         "color": "color-general",
         "img": "assets/img/72b1dea5327262b16f36dc0ea34a3581d861bbf2.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
@@ -278,7 +278,7 @@
     {
         "title": "'Kiyoko'",
         "type": "General Works",
-        "sub": "General Works",
+        "sub": "OC Setting",
         "color": "color-general",
         "img": "assets/img/G52OKoSbkAIkNhU.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
@@ -290,7 +290,7 @@
         {
         "title": "'Soo-Mi'",
         "type": "General Works",
-        "sub": "General Works",
+        "sub": "OC Setting",
         "color": "color-general",
         "img": "assets/img/25599ac5db7db3d026df666de9eb0cab65331beb.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
@@ -302,7 +302,7 @@
     {
         "title": "Vera",
         "type": "General Works",
-        "sub": "General Works",
+        "sub": "Re: Zero",
         "color": "color-general",
         "img": "assets/img/cc71a0f384d37172e16a1390b6fba62d9247fbbb.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/d4af37?text=GENERAL",
