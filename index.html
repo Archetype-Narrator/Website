@@ -191,6 +191,19 @@
         .sort-toggle:focus-visible { background: rgba(0,242,255,0.1); outline: none; }
         .sort-toggle.active { background: rgba(212,175,55,0.2); border-color: var(--accent-gold); color: var(--accent-gold); box-shadow: 0 0 8px rgba(212,175,55,0.3); }
 
+        .wip-toggle {
+            background: transparent; border: 1px solid var(--hud-border);
+            color: var(--hud-cyan); padding: 6px 14px;
+            font-size: 0.72rem; cursor: pointer; white-space: nowrap;
+            font-family: 'Cinzel', serif; letter-spacing: 1px;
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .wip-toggle:hover,
+        .wip-toggle:focus-visible { background: rgba(0,242,255,0.1); outline: none; }
+        .wip-toggle.wip-last  { background: rgba(255,60,60,0.1);  border-color: var(--command-red); color: var(--command-red);  box-shadow: 0 0 8px rgba(255,60,60,0.2); }
+        .wip-toggle.wip-first { background: rgba(255,60,60,0.2);  border-color: var(--command-red); color: var(--command-red);  box-shadow: 0 0 8px rgba(255,60,60,0.35); }
+
         
         .main-container { max-width: 1500px; margin: 0 auto; padding: 0 20px; }
 
@@ -393,6 +406,9 @@
                 <button class="sort-toggle" id="sortToggle" aria-pressed="false" title="Toggle sort by recently added">
                     SORT: RECENTLY_ADDED
                 </button>
+                <button class="wip-toggle" id="wipToggle" title="Cycle WIP sort order">
+                    WIP: LAST
+                </button>
             </div>
         </div>
     </header>
@@ -446,6 +462,7 @@
         const EXTRA_CLASSES = new Set(['Alter-Ego','Pretender','Avenger','Ruler','Shielder','Watcher','Foreigner']);
 
         let sortMode   = 'priority';
+        let wipSort    = 'last';   // 'last' = WIP at end (default), 'first' = WIP at top, 'off' = no WIP separation
         let allEntries = [];
         let activeFilters = new Set(); 
 
@@ -458,6 +475,7 @@
         const counterDisplay = document.getElementById('counterDisplay');
         const controlPanel   = document.getElementById('controlPanel');
         const sortToggle     = document.getElementById('sortToggle');
+        const wipToggle      = document.getElementById('wipToggle');
         const filterTrigger  = document.getElementById('filterTrigger');
         const filterPanel    = document.getElementById('filterPanel');
         const filterBadge    = document.getElementById('filterBadge');
@@ -564,6 +582,25 @@
             rebuildGrid();
         });
 
+        // ── WIP SORT TOGGLE (cycles: last → first → off → last) ──
+        wipToggle.addEventListener('click', () => {
+            if (wipSort === 'last')       wipSort = 'first';
+            else if (wipSort === 'first') wipSort = 'off';
+            else                          wipSort = 'last';
+
+            wipToggle.classList.remove('wip-last', 'wip-first');
+            if (wipSort === 'last') {
+                wipToggle.textContent = 'WIP: LAST';
+            } else if (wipSort === 'first') {
+                wipToggle.classList.add('wip-first');
+                wipToggle.textContent = 'WIP: FIRST';
+            } else {
+                wipToggle.classList.add('wip-last');
+                wipToggle.textContent = 'WIP: MIXED';
+            }
+            rebuildGrid();
+        });
+
         
         async function loadData() {
             try {
@@ -580,15 +617,27 @@
 
         
         function getSorted(entries) {
+            let sorted;
             if (sortMode === 'recent') {
-                return [...entries].sort((a, b) => {
+                sorted = [...entries].sort((a, b) => {
                     const da = a.dateAdded ? new Date(a.dateAdded) : new Date(0);
                     const db = b.dateAdded ? new Date(b.dateAdded) : new Date(0);
                     return db - da;
                 });
+            } else {
+                const priority = { "Servant": 1, "Master": 2, "General Works": 3 };
+                sorted = [...entries].sort((a, b) => (priority[a.type] ?? 99) - (priority[b.type] ?? 99));
             }
-            const priority = { "Servant": 1, "Master": 2, "General Works": 3 };
-            return [...entries].sort((a, b) => (priority[a.type] ?? 99) - (priority[b.type] ?? 99));
+
+            // Apply WIP ordering on top of primary sort (stable, preserves relative order within groups)
+            if (wipSort === 'last') {
+                sorted.sort((a, b) => (a.wip ? 1 : 0) - (b.wip ? 1 : 0));
+            } else if (wipSort === 'first') {
+                sorted.sort((a, b) => (b.wip ? 1 : 0) - (a.wip ? 1 : 0));
+            }
+            // 'off' = no additional WIP sort, keep primary order as-is
+
+            return sorted;
         }
 
         
