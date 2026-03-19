@@ -158,9 +158,9 @@
     {
         "title": "Hekate",
         "type": "Servant",
-        "sub": "Caster",
+        "sub": "Assassin",
         "color": "color-servant",
-        "img": "",
+        "img": "assets/img/pgr-character-database-nirvatia-dir.png",
         "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
         "link": "#",
         "summary": "Work in progress.",
@@ -239,6 +239,30 @@
         "dateAdded": "2026-02-01",
         "wip": false
     },
+        {
+        "title": "Mei Nieyin",
+        "type": "Master",
+        "sub": "Eastern Magus",
+        "color": "color-master",
+        "img": "assets/img/7bc89cd2f1a04fc713edb3c76fc4181668d.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
+        "link": "",
+        "summary": "Eastern Magus of Fiends (Daemons). A person similar in nature to Kirei Kotomine, but vastly different in that rather than possessing a common sense inherently leaning toward the immoral - unable to grasp the importance of 'good' - she instead possesses the inability to understand morality at all, a common sense completely alien to the rest of man since the moment of her birth — a sinner from the moment of her existence long before she became a mass of curses and fiends.",
+        "dateAdded": "2026-02-01",
+        "wip": true
+    },
+        {
+        "title": "Aris Magentin",
+        "type": "Master",
+        "sub": "Spellcaster",
+        "color": "color-master",
+        "img": "assets/img/9b9ab16c740a16a9e20e5976ec7f8b270c2.png",
+        "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
+        "link": "",
+        "summary": "Not the true name of the Golden haired man. Perhaps not even his true face. He proclaims himself to be of a different time, inconsistently. His name is an anagram but also a possible lie. He carries the mysteries of the east, their crest, but the swordsmanship and style of the west — the visage of an old noble — and the way of life some modern man or future man. Unusual in every sense of the word, no telling where lies begin and where truths come about with this man. A walking puzzle to be deciphered.",
+        "dateAdded": "2026-02-01",
+        "wip": true
+    },
     {
         "title": "Sibylle Itud-dara",
         "type": "Master",
@@ -276,19 +300,19 @@
         "wip": true
     },
     {
-        "title": "???",
+        "title": "Remissus Punitor",
         "type": "Master",
         "sub": "Burial Agent",
         "color": "color-master",
         "img": "assets/img/188d15e988cbde157e765946923688495bbbb08b.jpg",
         "imgFallback": "https://placehold.co/400x600/01080f/00f2ff?text=MAGUS",
         "link": "#",
-        "summary": "Work in progress.",
+        "summary": "One who claims himself as a specialist in binding arts and in matters of faith. An oddball like the rest of the original Burial Agency, but a far cry from Narbareck. It is said that the scripture he carries, that of binding, is an 'Angel' from the depths of the Church.",
         "dateAdded": "2026-02-01",
         "wip": true
     },
         {
-        "title": "???",
+        "title": "Oriane Nouvel",
         "type": "Master",
         "sub": "Executor",
         "color": "color-master",
