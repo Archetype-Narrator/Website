@@ -186,10 +186,10 @@
         "color": "color-servant",
         "img": "assets/img/1777d763c6037f475224d89719aac8ef185.png",
         "imgFallback": "https://placehold.co/400x600/01080f/4488ff?text=SHIELDER",
-        "link": "#",
-        "summary": "Work in progress.",
+        "link": "https://docs.google.com/document/d/18Vtq20gx_CAWCT2pI7c4HkKA2nlIYgUHjTz6UVhtzv4/edit?usp=sharing",
+        "summary": "Watcher of Victory - The Great Goddess Nike.",
         "dateAdded": "2026-02-01",
-        "wip": true
+        "wip": false
     },
     {
         "title": "Vanadís Freyja",
