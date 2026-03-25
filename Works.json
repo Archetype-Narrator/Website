@@ -162,10 +162,10 @@
         "color": "color-servant",
         "img": "assets/img/pgr-character-database-nirvatia-dir.png",
         "imgFallback": "https://placehold.co/400x600/01080f/ff8800?text=PRETENDER",
-        "link": "#",
-        "summary": "Work in progress.",
+        "link": "https://docs.google.com/document/d/1eRqGQgVyk4OIvk6S69Mt6Chi14RrJmMfCyJwqRKAX3w/edit?usp=sharing",
+        "summary": "One of the Trimorphis Manifestations of Hekate—with Brimo (The Terrifying), otherwise known as Hekate-Kardiodiatos and Anassa Eneroi—as the primary face.",
         "dateAdded": "2026-02-01",
-        "wip": true
+        "wip": false
     },
     {
         "title": "Hildegard Von Bingen",
