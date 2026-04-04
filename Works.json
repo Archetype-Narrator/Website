@@ -107,6 +107,30 @@
         "dateAdded": "2026-02-01",
         "wip": true
     },
+        {
+        "title": "Medea",
+        "type": "Canon",
+        "sub": "Caster",
+        "color": "color-servant",
+        "img": "assets/img/946809386789e9c1c61a02fb965aab9ce64af6ad.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/ff3c3c?text=ASSASSIN",
+        "link": "https://docs.google.com/document/d/1qKCSqd8ADqZ8Rx_sEtaKwtwhYaDeutKkVs6QWAcn9yQ/edit?usp=sharing",
+        "summary": "The daughter of Aeëtes, the king of Colchis from Greek mythology, owner of the golden fleece. She is a bonafide princess, but she is also a witch from the Age of the Gods, taught by the Moon Goddess Hekate.",
+        "dateAdded": "2026-02-01",
+        "wip": false
+    },
+        {
+        "title": "Ozymandias",
+        "type": "Canon",
+        "sub": "Rider",
+        "color": "color-servant",
+        "img": "assets/img/b4f6d528c4d7ee6bbfda4de7e9bfc93b6fba1c23.jpg",
+        "imgFallback": "https://placehold.co/400x600/01080f/ff3c3c?text=ASSASSIN",
+        "link": "https://docs.google.com/document/d/1kZtHbmQNP5abrd-Q2S50kHzKTz_UAnRzo8UcXpESwB0/edit?usp=sharing",
+        "summary": "A wise ruler and exemplary statesman who, while fighting the Hittites, eventually made peace and brought about a thriving prosperity to ancient Egypt by means of 'cultural exchange and interaction'. He is in particular a valorous general, and a man who had married the world's most beautiful women and fathered over a hundred children. Even in the current era, he is famous for leaving behind a large number of various colossal constructions. He loved the masses just like Osiris would, and he was greatly loved by the people in return. The very golden age of ancient Egypt is during his longstanding reign of 7X years.",
+        "dateAdded": "2026-02-01",
+        "wip": false
+    },
     {
         "title": "Odin",
         "type": "Servant",

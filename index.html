@@ -339,7 +339,7 @@
         .color-servant { color: var(--command-red); }
         .color-master  { color: var(--hud-cyan); }
         .color-general { color: var(--accent-gold); }
-
+        .color-canon   { color: #a855f7; }
         
         @media (max-width: 900px) {
             .grid { grid-template-columns: 1fr; }
@@ -406,6 +406,7 @@
                             <button class="filter-btn" data-filter="Servant">SERVANTS</button>
                             <button class="filter-btn" data-filter="Master">MAGUS</button>
                             <button class="filter-btn" data-filter="General">GENERAL_WORKS</button>
+                            <button class="filter-btn" data-filter="Canon">CANON</button>
                         </div>
                     </div>
                     <div class="panel-group">
@@ -698,7 +699,7 @@
                     return db - da;
                 });
             } else {
-                const priority = { "Servant": 1, "Master": 2, "General Works": 3 };
+                const priority = { "Servant": 1, "Master": 2, "General Works": 3, "Canon": 4 };
                 sorted = [...entries].sort((a, b) => (priority[a.type] ?? 99) - (priority[b.type] ?? 99));
             }
 
